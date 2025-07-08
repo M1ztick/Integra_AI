@@ -9,12 +9,24 @@ A powerful Node.js/TypeScript GenAI application demonstrating text generation us
 - **Environment Configuration** with dotenv
 - **Error Handling** and timeout management
 - **Extensible Architecture** - Easy to add new models and capabilities
+- **Modern Tooling** - ESLint, Prettier, and TypeScript compilation
+
+## What It Does 🎯
+
+When you run the application, it demonstrates three different AI capabilities:
+
+1. **📝 Story Generation** - Creates creative stories using GPT-2
+2. **💻 Code Generation** - Generates JavaScript code using CodeGPT
+3. **❓ Question Answering** - Answers questions using DialoGPT
+
+Each example showcases different AI models with customized parameters like temperature and max length.
 
 ## Supported Models 🤖
 
 - `gpt2` - General text generation
 - `microsoft/DialoGPT-large` - Conversational AI
 - `microsoft/CodeGPT-small-js` - JavaScript code generation
+- `bigscience/bloom-560m` - Multilingual large language model
 
 ## Setup 🚀
 
@@ -37,6 +49,18 @@ A powerful Node.js/TypeScript GenAI application demonstrating text generation us
 
 4. **Run the Application**:
 
+   **Development mode** (with auto-reload):
+   ```bash
+   npm run dev
+   ```
+
+   **Or build and run in production**:
+   ```bash
+   npm run build
+   npm start
+   ```
+
+   **Or run directly with ts-node**:
    ```bash
    npx ts-node src/index.ts
    ```
@@ -46,12 +70,27 @@ A powerful Node.js/TypeScript GenAI application demonstrating text generation us
 ```plaintext
 Integra_AI/
 ├── src/
-│   └── index.ts          # Main application logic
-├── .env.example          # Environment variables template
-├── README.md            # This file
-├── package.json         # Dependencies
-└── tsconfig.json        # TypeScript configuration
+│   ├── index.ts           # Main application logic
+│   └── models.ts          # AI model definitions and configurations
+├── dist/                  # Compiled JavaScript output
+├── .env.example           # Environment variables template
+├── .gitignore             # Git ignore patterns
+├── eslint.config.js       # ESLint configuration
+├── .prettierrc.json       # Prettier configuration
+├── package.json           # Dependencies and scripts
+├── README.md              # This file
+└── tsconfig.json          # TypeScript configuration
 ```
+
+## Available Scripts 📋
+
+- `npm run dev` - Run in development mode with auto-reload
+- `npm run build` - Build the TypeScript project
+- `npm start` - Run the built application
+- `npm run lint` - Check code style and quality
+- `npm run lint:fix` - Auto-fix linting issues
+- `npm run format` - Format code with Prettier
+- `npm run format:check` - Check code formatting
 
 ## Expanding the Project 🔧
 
