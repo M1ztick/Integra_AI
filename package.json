@@ -2,16 +2,17 @@
   "name": "integra-ai",
   "version": "1.0.0",
   "description": "A TypeScript GenAI application using Hugging Face models",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
-    "dev": "ts-node --watch src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts --watch",
     "build": "tsc",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "format": "prettier --write src/**/*.ts",
     "format:check": "prettier --check src/**/*.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Tests not yet implemented. Run 'npm run dev' to test the application manually.\"",
+    "test:app": "node dist/index.js || echo \"Build the app first with 'npm run build'\""
   },
   "keywords": [
     "ai",
@@ -20,13 +21,14 @@
     "genai",
     "text-generation"
   ],
-  "author": "",
+  "author": "M1ztick",
   "license": "MIT",
   "dependencies": {
     "@types/node": "^24.0.0",
     "axios": "^1.9.0",
     "dotenv": "^16.5.0",
     "ts-node": "^10.9.2",
+    "tslib": "^2.6.2",
     "typescript": "^5.8.3"
   },
   "devDependencies": {
